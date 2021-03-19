@@ -344,4 +344,14 @@
     <servlet-name>Servlet5</servlet-name>
     <url-pattern>/servlet5</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletTolsp</display-name>
+    <servlet-name>ServletTolsp</servlet-name>
+    <servlet-class>com.controller.ServletTolsp</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletTolsp</servlet-name>
+    <url-pattern>/servlettolsp</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Employee
+ * Servlet implementation class ServletTolsp
  */
-public class Employee extends HttpServlet {
+public class ServletTolsp extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -17,13 +17,14 @@ public class Employee extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		/*
-		 * int amount = Integer.parseInt(request.getParameter("amount")); String cardno
-		 * = request.getParameter("cardno"); System.out.println(amount);
-		 * System.out.println(cardno);
-		 */
-		//doPost(request, response);
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		String name="Ajayraj";
+		request.setAttribute("name", name);
+		
+		//url controller. **.java   -->.jsp // .jsp ext --
+		
+		request.getRequestDispatcher("name.jsp").forward(request, response);
 	}
 
 	/**
@@ -31,11 +32,7 @@ public class Employee extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int amount = Integer.parseInt(request.getParameter("amount"));
-		String cardno = request.getParameter("cardno");
-		System.out.println(amount);
-		System.out.println(cardno);
-		
+		doGet(request, response);
 	}
 
 }
